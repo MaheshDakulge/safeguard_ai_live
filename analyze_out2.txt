@@ -1,0 +1,14 @@
+﻿Analyzing safeguard_mobile...                                   
+
+   info - Unnecessary use of multiple underscores - lib\screens\alerts_screen.dart:219:29 - unnecessary_underscores
+   info - Statements in an if should be enclosed in a block - lib\screens\blocklist_screen.dart:86:19 - curly_braces_in_flow_control_structures
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:116:62 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\screens\blocklist_screen.dart:127:15 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:189:20 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:191:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:224:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:233:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:234:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:250:40 - deprecated_member_use
+warning - The value of the field '_tabKeys' isn't used - lib\screens\home_screen.dart:40:9 - unused_field
+

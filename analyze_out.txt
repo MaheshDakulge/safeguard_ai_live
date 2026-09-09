@@ -1,0 +1,40 @@
+﻿Analyzing safeguard_mobile...                                   
+
+   info - Unnecessary use of multiple underscores - lib\screens\alerts_screen.dart:219:29 - unnecessary_underscores
+  error - The method 'getBlocklistStats' isn't defined for the type 'ApiService' - lib\screens\blocklist_screen.dart:38:38 - undefined_method
+  error - The method 'getBlockedUrls' isn't defined for the type 'ApiService' - lib\screens\blocklist_screen.dart:39:38 - undefined_method
+  error - The method 'addBlockedUrl' isn't defined for the type 'ApiService' - lib\screens\blocklist_screen.dart:52:33 - undefined_method
+  error - Invalid constant value - lib\screens\blocklist_screen.dart:59:52 - invalid_constant
+  error - The getter 'emerald' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:59:61 - undefined_getter
+  error - The method 'removeBlockedUrl' isn't defined for the type 'ApiService' - lib\screens\blocklist_screen.dart:73:33 - undefined_method
+   info - Statements in an if should be enclosed in a block - lib\screens\blocklist_screen.dart:86:19 - curly_braces_in_flow_control_structures
+  error - Invalid constant value - lib\screens\blocklist_screen.dart:87:47 - invalid_constant
+  error - The getter 'primaryViolet' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:87:56 - undefined_getter
+  error - The getter 'primaryViolet' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:98:65 - undefined_getter
+  error - The getter 'neonCyan' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:100:70 - undefined_getter
+  error - The getter 'emerald' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:102:67 - undefined_getter
+  error - The getter 'textMuted' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:108:27 - undefined_getter
+  error - The getter 'surfaceCard' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:114:29 - undefined_getter
+  error - The getter 'primaryViolet' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:116:48 - undefined_getter
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\screens\blocklist_screen.dart:127:15 - deprecated_member_use
+  error - The getter 'surfaceCard' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:128:39 - undefined_getter
+  error - The getter 'violetGradient' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:141:38 - undefined_getter
+  error - The getter 'textMuted' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:165:27 - undefined_getter
+  error - The getter 'surfaceCard' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:174:31 - undefined_getter
+  error - The getter 'textMuted' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:178:56 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:189:20 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:191:39 - deprecated_member_use
+  error - The getter 'textMuted' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:198:25 - undefined_getter
+  error - The method 'categoryColor' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:204:31 - undefined_method
+  error - The getter 'surfaceCard' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:209:25 - undefined_getter
+  error - The getter 'primaryViolet' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:233:32 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\blocklist_screen.dart:234:36 - deprecated_member_use
+  error - The getter 'primaryLight' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:238:48 - undefined_getter
+  error - The getter 'textMuted' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:238:72 - undefined_getter
+  error - The getter 'danger' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:250:33 - undefined_getter
+  error - Invalid constant value - lib\screens\blocklist_screen.dart:253:24 - invalid_constant
+  error - The getter 'danger' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:253:33 - undefined_getter
+  error - Invalid constant value - lib\screens\blocklist_screen.dart:257:57 - invalid_constant
+  error - The getter 'textMuted' isn't defined for the type 'AppTheme' - lib\screens\blocklist_screen.dart:257:66 - undefined_getter
+warning - The value of the field '_tabKeys' isn't used - lib\screens\home_screen.dart:40:9 - unused_field
+

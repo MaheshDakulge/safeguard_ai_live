@@ -40,7 +40,9 @@ jobs:
         run: flutter pub get
 
       - name: 🌐 Build Flutter Web App
-        run: flutter build web --release --base-href "/safeguard_ai_live/"
+        run: |
+          flutter build web --release --base-href "/safeguard_ai_live/"
+          touch build/web/.nojekyll
 
       - name: 🚀 Deploy to gh-pages branch
         uses: Peaceiris/actions-gh-pages@v3

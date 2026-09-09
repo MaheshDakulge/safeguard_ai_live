@@ -2,43 +2,250 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Access Blocked — SafeGuard AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Restricted — SafeGuard AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% 0%, #1E1B4B 0%, #0F172A 70%, #090D16 100%);
+      --card-bg: rgba(30, 41, 59, 0.75);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --danger: #EF4444;
+      --danger-glow: rgba(239, 68, 68, 0.35);
+      --accent-blue: #38BDF8;
+      --card-inner: rgba(15, 23, 42, 0.6);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Outfit', -apple-system, sans-serif; }
+
     body {
-      background: #0F172A;
-      color: #F8FAFC;
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
       display: flex;
-      height: 100vh;
-      margin: 0;
       align-items: center;
       justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
     }
 
-    .container {
+    .background-glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: var(--danger-glow);
+      filter: blur(140px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .main-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
       text-align: center;
-      background: #1E293B;
-      border: 1px solid #334155;
-      padding: 40px;
-      border-radius: 16px;
-      max-width: 480px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.4s ease-out;
     }
 
-    .icon { font-size: 64px; margin-bottom: 16px; }
-    h1 { font-size: 24px; color: #EF4444; margin-bottom: 12px; }
-    p { font-size: 14px; color: #94A3B8; margin-bottom: 24px; line-height: 1.5; }
-    .domain-tag { background: #090D16; color: #F8FAFC; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #334155; }
-    .footer { font-size: 12px; color: #64748B; margin-top: 24px; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .shield-badge {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: rgba(239, 68, 68, 0.12);
+      border: 2px solid rgba(239, 68, 68, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      box-shadow: 0 0 30px var(--danger-glow);
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 25px var(--danger-glow); }
+      50% { transform: scale(1.05); box-shadow: 0 0 45px rgba(239, 68, 68, 0.55); }
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Structured Inner Info Boxes */
+    .box-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .info-box {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .info-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .domain-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 8px;
+      word-break: break-all;
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .status-card {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .status-value {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .status-value.high { color: var(--danger); }
+    .status-value.sent { color: #22C55E; }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #2563EB;
+      color: white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #1D4ED8;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .footer-brand {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .footer-brand span { color: #38BDF8; font-weight: 600; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="icon">🚫</div>
-    <h1>Website Blocked</h1>
-    <p>Access to <span class="domain-tag" id="domainText">this site</span> has been restricted by SafeGuard AI Child Protection.</p>
-    <p>An alert notification has been logged on the Parent Safety Dashboard.</p>
-    <div class="footer">SafeGuard AI — Real-Time Browsing Protection</div>
+  <div class="background-glow"></div>
+
+  <div class="main-card">
+    <div class="shield-badge">🛡️</div>
+    <h1>Access Restricted</h1>
+    <p class="subtitle">This webpage has been blocked by SafeGuard AI Protection rules.</p>
+
+    <div class="box-grid">
+      <div class="info-box">
+        <span class="info-label">Restricted URL</span>
+        <span class="domain-pill" id="domainText">restricted-site.com</span>
+      </div>
+
+      <div class="status-row">
+        <div class="status-card">
+          <div class="info-label">Risk Category</div>
+          <div class="status-value high">HIGH RISK 🔴</div>
+        </div>
+        <div class="status-card">
+          <div class="info-label">Parent Alert</div>
+          <div class="status-value sent">LOGGED 🔔</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="window.history.back()">Go Back Safely</button>
+    </div>
+
+    <div class="footer-brand">
+      Protected by <span>SafeGuard AI Child Safety</span>
+    </div>
   </div>
 
   <script>
@@ -50,3 +257,4 @@
   </script>
 </body>
 </html>
+

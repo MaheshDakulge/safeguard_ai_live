@@ -15,6 +15,11 @@ class TemplateCreate(BaseModel):
     columns: List[ColumnDefinition] = []
 
 
+class TemplateUpdate(BaseModel):
+    name: Optional[str] = None
+    columns: Optional[List[ColumnDefinition]] = None
+
+
 class TemplateResponse(TemplateCreate):
     id: UUID
     teacher_id: UUID
@@ -22,3 +27,4 @@ class TemplateResponse(TemplateCreate):
 
     class Config:
         from_attributes = True
+

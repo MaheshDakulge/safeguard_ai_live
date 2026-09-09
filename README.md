@@ -28,7 +28,7 @@
 | :--- | :--- | :--- |
 | 🚀 **Web App / Parent Dashboard** | Cross-platform Flutter Web application for parents to monitor browsing safety, review high-risk alerts, manage blocklists, and check extension status. | **[Launch Live Web Dashboard](https://maheshdakulge.github.io/safeguard_ai_live/)** |
 | ⚡ **Render Backend API** | FastAPI REST backend hosted on Render, handling JWT auth, pairing code generation, incident risk scoring, and Supabase database sync. | **[API Health Endpoint](https://safeguard-api.onrender.com/)** |
-| 🧩 **Chrome Browser Extension** | Lightweight Chrome Extension that runs in the child's browser, monitors page activity, blocks restricted domains, and sends alerts to Render API. | **[Extension Integration Guide](#-chrome-extension-setup--pairing)** |
+| 🧩 **Chrome Browser Extension** | Lightweight Chrome Extension that runs in the child's browser, monitors page activity, blocks restricted domains, and sends alerts to Render API. | **[Extension Step-by-Step Guide](#-chrome-extension-installation--pairing-guide)** |
 | 📦 **GitHub Repository** | Complete open-source codebase for Flutter frontend, backend services, and deployment workflows. | **[GitHub Source Code](https://github.com/MaheshDakulge/safeguard_ai_live)** |
 
 ---
@@ -107,25 +107,44 @@ flowchart TD
 
 ---
 
-## 🧩 Chrome Extension Setup & Pairing
+## 🧩 Chrome Extension Installation & Pairing Guide
 
-To link the Chrome Extension on the child's browser to the Parent Dashboard:
+Follow these simple steps to install, configure, and pair the SafeGuard Chrome Extension on your child's laptop or desktop browser.
 
-1. **Get your 6-Digit Pairing Code**:
-   - Open the **SafeGuard Parent Dashboard** (Live Web App or Mobile App).
-   - Log in or register an account.
-   - Locate your unique **Pairing Code** on the Home screen (e.g., `849201`).
+### 📥 Step 1: Install the Extension in Google Chrome
 
-2. **Install the Extension**:
-   - Download or clone the SafeGuard Chrome Extension repository.
-   - Open Chrome and navigate to `chrome://extensions/`.
-   - Enable **Developer mode** in the top right corner.
-   - Click **Load unpacked** and select the extension directory.
+1. Open **Google Chrome** on the child's computer.
+2. Navigate to `chrome://extensions/` in the address bar.
+3. Toggle ON **Developer mode** in the top right corner.
+4. Click the **Load unpacked** button in the top left.
+5. Select your `safeguard_extension` folder containing `manifest.json`.
 
-3. **Pair Extension**:
-   - Click the **SafeGuard Extension icon** in the Chrome toolbar.
-   - Enter your **Render API URL** (`https://safeguard-api.onrender.com`) and your **6-digit Pairing Code**.
-   - Click **Connect**. The status indicator on your Parent Dashboard will turn **Active** 🟢!
+---
+
+### 🔑 Step 2: Get your 6-Digit Pairing Code
+
+1. Launch the **[SafeGuard Live Web Dashboard](https://maheshdakulge.github.io/safeguard_ai_live/)** (or mobile app).
+2. Log in or create your parent account.
+3. On the **Home** dashboard tab, locate your unique **Pairing Code** (e.g. `849201`).
+
+---
+
+### 🔗 Step 3: Connect Extension to Render Backend
+
+1. Click the **SafeGuard puzzle piece / extension icon** in the Chrome toolbar.
+2. Enter the backend service configuration:
+   - **Render API URL**: `https://safeguard-api.onrender.com`
+   - **6-Digit Pairing Code**: *(Enter your code from Step 2)*
+3. Click **Connect & Protect**.
+
+---
+
+### ✅ Step 4: Verify Live Protection
+
+- Once connected, the extension badge will show **PROTECTED 🟢**.
+- Return to your **SafeGuard Parent Dashboard**:
+  - The Extension status will switch to **Active 🟢**.
+  - Any unsafe websites or high-risk content visited on the child's browser will instantly trigger an alert on the parent's dashboard!
 
 ---
 
@@ -154,15 +173,14 @@ To link the Chrome Extension on the child's browser to the Parent Dashboard:
 1. **Push your repository to GitHub**:
    ```bash
    git add .
-   git commit -m "Update repository links and GitHub Pages base URL"
+   git commit -m "Update extension setup guide and GitHub Pages config"
    git push
    ```
 
 2. **Automated Deployment**:
    - GitHub Actions automatically executes [.github/workflows/deploy-web.yml](file:///.github/workflows/deploy-web.yml) to compile the Flutter Web app.
-   - After the workflow completes (~1-2 minutes), a new branch named **`gh-pages`** is created automatically.
    - Go to your GitHub repository **Settings** > **Pages**.
-   - Under **Build and deployment**, set **Branch**: `gh-pages` and folder `/ (root)`.
+   - Under **Build and deployment**, set **Source** to `GitHub Actions` (or select branch `gh-pages`).
    - Click **Save**.
 
 3. **Access Live Web App**:

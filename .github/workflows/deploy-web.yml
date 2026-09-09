@@ -35,7 +35,7 @@ jobs:
         run: flutter pub get
 
       - name: 🌐 Build Flutter Web App
-        run: flutter build web --release --base-href "/safeguard_mobile/"
+        run: flutter build web --release --base-href "/safeguard_ai_live/"
 
       - name: 🚀 Deploy to GitHub Pages
         uses: Peaceiris/actions-gh-pages@v3

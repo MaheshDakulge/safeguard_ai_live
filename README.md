@@ -4,9 +4,9 @@
 
 ### AI-Powered Web Content Scanner, Real-Time Alert System, Remote Blocklist Manager & Parent Analytics Dashboard
 
-[![Live Web App](https://img.shields.io/badge/🌐_Live_Web_App-Launch_Dashboard-2563EB?style=for-the-badge&logo=githubpages&logoColor=white)](https://YOUR_GITHUB_USERNAME.github.io/safeguard_mobile/)
+[![Live Web App](https://img.shields.io/badge/🌐_Live_Web_App-Launch_Dashboard-2563EB?style=for-the-badge&logo=githubpages&logoColor=white)](https://maheshdakulge.github.io/safeguard_ai_live/)
 [![Render Backend API](https://img.shields.io/badge/⚡_Render_Backend_API-Active-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://safeguard-api.onrender.com/)
-[![GitHub Repo](https://img.shields.io/badge/📦_GitHub_Repo-View_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB_USERNAME/safeguard_mobile)
+[![GitHub Repo](https://img.shields.io/badge/📦_GitHub_Repo-View_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MaheshDakulge/safeguard_ai_live)
 
 ---
 
@@ -26,10 +26,10 @@
 
 | Component | Description | Live Access / Link |
 | :--- | :--- | :--- |
-| 🚀 **Web App / Parent Dashboard** | Cross-platform Flutter Web application for parents to monitor browsing safety, review high-risk alerts, manage blocklists, and check extension status. | **[Launch Live Web Dashboard](https://YOUR_GITHUB_USERNAME.github.io/safeguard_mobile/)** |
+| 🚀 **Web App / Parent Dashboard** | Cross-platform Flutter Web application for parents to monitor browsing safety, review high-risk alerts, manage blocklists, and check extension status. | **[Launch Live Web Dashboard](https://maheshdakulge.github.io/safeguard_ai_live/)** |
 | ⚡ **Render Backend API** | FastAPI REST backend hosted on Render, handling JWT auth, pairing code generation, incident risk scoring, and Supabase database sync. | **[API Health Endpoint](https://safeguard-api.onrender.com/)** |
 | 🧩 **Chrome Browser Extension** | Lightweight Chrome Extension that runs in the child's browser, monitors page activity, blocks restricted domains, and sends alerts to Render API. | **[Extension Integration Guide](#-chrome-extension-setup--pairing)** |
-| 📦 **GitHub Repository** | Complete open-source codebase for Flutter frontend, backend services, and deployment workflows. | **[GitHub Source Code](https://github.com/YOUR_GITHUB_USERNAME/safeguard_mobile)** |
+| 📦 **GitHub Repository** | Complete open-source codebase for Flutter frontend, backend services, and deployment workflows. | **[GitHub Source Code](https://github.com/MaheshDakulge/safeguard_ai_live)** |
 
 ---
 
@@ -135,7 +135,7 @@ To link the Chrome Extension on the child's browser to the Parent Dashboard:
 
 1. Log in to **[Render Dashboard](https://dashboard.render.com)**.
 2. Click **New +** > **Web Service**.
-3. Connect your GitHub repository (`safeguard_mobile` or backend repo).
+3. Connect your GitHub repository (`safeguard_ai_live` or backend repo).
 4. Configure service settings:
    - **Name**: `safeguard-api`
    - **Environment**: `Python 3` or `Docker`
@@ -153,23 +153,21 @@ To link the Chrome Extension on the child's browser to the Parent Dashboard:
 
 1. **Push your repository to GitHub**:
    ```bash
-   git init
    git add .
-   git commit -m "Configure live web app deployment & professional README"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/safeguard_mobile.git
-   git push -u origin main
+   git commit -m "Update repository links and GitHub Pages base URL"
+   git push
    ```
 
 2. **Automated Deployment**:
-   - GitHub Actions will automatically execute [.github/workflows/deploy-web.yml](file:///.github/workflows/deploy-web.yml) to compile the Flutter Web app.
-   - Once completed, go to your GitHub repository **Settings** > **Pages**.
-   - Set **Source** to `Deploy from a branch` and select **Branch**: `gh-pages`, folder `/ (root)`.
+   - GitHub Actions automatically executes [.github/workflows/deploy-web.yml](file:///.github/workflows/deploy-web.yml) to compile the Flutter Web app.
+   - After the workflow completes (~1-2 minutes), a new branch named **`gh-pages`** is created automatically.
+   - Go to your GitHub repository **Settings** > **Pages**.
+   - Under **Build and deployment**, set **Branch**: `gh-pages` and folder `/ (root)`.
    - Click **Save**.
 
 3. **Access Live Web App**:
    Your live dashboard will be published at:
-   👉 **`https://YOUR_GITHUB_USERNAME.github.io/safeguard_mobile/`**
+   👉 **`https://maheshdakulge.github.io/safeguard_ai_live/`**
 
 ---
 
@@ -184,8 +182,8 @@ To link the Chrome Extension on the child's browser to the Parent Dashboard:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/safeguard_mobile.git
-   cd safeguard_mobile
+   git clone https://github.com/MaheshDakulge/safeguard_ai_live.git
+   cd safeguard_ai_live
    ```
 
 2. **Install dependencies**:

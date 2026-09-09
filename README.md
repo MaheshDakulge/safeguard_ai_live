@@ -6,6 +6,7 @@
 
 [![Live Web App](https://img.shields.io/badge/🌐_Live_Web_App-Launch_Dashboard-2563EB?style=for-the-badge&logo=githubpages&logoColor=white)](https://maheshdakulge.github.io/safeguard_ai_live/)
 [![Render Backend API](https://img.shields.io/badge/⚡_Render_Backend_API-Active-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://safeguard-api.onrender.com/)
+[![Chrome Extension](https://img.shields.io/badge/🧩_Chrome_Extension-Installation_Guide-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#-chrome-extension-installation--pairing-guide)
 [![GitHub Repo](https://img.shields.io/badge/📦_GitHub_Repo-View_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MaheshDakulge/safeguard_ai_live)
 
 ---
@@ -28,7 +29,7 @@
 | :--- | :--- | :--- |
 | 🚀 **Web App / Parent Dashboard** | Cross-platform Flutter Web application for parents to monitor browsing safety, review high-risk alerts, manage blocklists, and check extension status. | **[Launch Live Web Dashboard](https://maheshdakulge.github.io/safeguard_ai_live/)** |
 | ⚡ **Render Backend API** | FastAPI REST backend hosted on Render, handling JWT auth, pairing code generation, incident risk scoring, and Supabase database sync. | **[API Health Endpoint](https://safeguard-api.onrender.com/)** |
-| 🧩 **Chrome Browser Extension** | Lightweight Chrome Extension that runs in the child's browser, monitors page activity, blocks restricted domains, and sends alerts to Render API. | **[Extension Step-by-Step Guide](#-chrome-extension-installation--pairing-guide)** |
+| 🧩 **Chrome Browser Extension** | Lightweight Chrome Extension that runs in the child's browser, monitors page activity, blocks restricted domains, and sends alerts to Render API. | **[Extension Source / Files](https://github.com/MaheshDakulge/safeguard_ai_live)** • **[Installation Guide](#-chrome-extension-installation--pairing-guide)** |
 | 📦 **GitHub Repository** | Complete open-source codebase for Flutter frontend, backend services, and deployment workflows. | **[GitHub Source Code](https://github.com/MaheshDakulge/safeguard_ai_live)** |
 
 ---

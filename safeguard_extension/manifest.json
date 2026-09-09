@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "SafeGuard AI — Child Safety & Browsing Protection",
+  "short_name": "SafeGuard AI",
+  "version": "1.0.0",
+  "description": "Real-time web scanner, automated domain blocker, and safety alert monitor for parents.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SafeGuard AI Protection"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

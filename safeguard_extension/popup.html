@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeGuard AI</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --bg: #0F172A;
+      --card: #1E293B;
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+      --success: #22C55E;
+      --danger: #EF4444;
+      --border: #334155;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+
+    body {
+      width: 320px;
+      background: var(--bg);
+      color: var(--text);
+      padding: 16px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-icon {
+      font-size: 24px;
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .header-subtitle {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .status-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .status-left { display: flex; align-items: center; gap: 8px; }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--danger); }
+    .status-dot.active { background: var(--success); box-shadow: 0 0 8px var(--success); }
+    .status-text { font-size: 13px; font-weight: 600; }
+
+    .form-group { margin-bottom: 12px; }
+    label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    input {
+      width: 100%;
+      background: #090D16;
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus { border-color: var(--primary); }
+
+    .btn {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+
+    .btn:hover { background: var(--primary-dark); }
+
+    .footer-note {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-icon">🛡️</div>
+    <div>
+      <div class="header-title">SafeGuard AI</div>
+      <div class="header-subtitle">Child Protection Scanner</div>
+    </div>
+  </div>
+
+  <div class="status-card">
+    <div class="status-left">
+      <div class="status-dot" id="statusDot"></div>
+      <span class="status-text" id="statusText">Not Connected</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="apiUrl">Backend API URL</label>
+    <input type="text" id="apiUrl" placeholder="https://safeguard-api.onrender.com" value="https://safeguard-api.onrender.com">
+  </div>
+
+  <div class="form-group">
+    <label for="pairingCode">6-Digit Pairing Code</label>
+    <input type="text" id="pairingCode" maxlength="6" placeholder="e.g. 849201">
+  </div>
+
+  <button class="btn" id="connectBtn">Connect & Protect</button>
+
+  <div class="footer-note">Get your pairing code from Parent Dashboard</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
